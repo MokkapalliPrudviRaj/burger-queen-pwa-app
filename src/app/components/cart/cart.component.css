@@ -1,0 +1,486 @@
+.forward-icon {
+    position: absolute;
+    top: calc(50% - 10px);
+    left: 16px;
+    width: 20px;
+    height: 20px;
+    overflow: hidden;
+}
+.foodie {
+    position: absolute;
+    top: calc(50% - 10px);
+    left: calc(50% - 66px);
+    font-weight: 800;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 132px;
+}
+.forward-icon1 {
+    position: absolute;
+    top: calc(50% - 10px);
+    right: 16px;
+    width: 20px;
+    height: 20px;
+    overflow: hidden;
+}
+.navigation-bar {
+    align-self: stretch;
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+}
+.header-navigation-bar-with-tit {
+    align-self: stretch;
+    background-color: #ffd700;
+    height: 44px;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    z-index: 2;
+    text-align: center;
+}
+.a-delicious-cheeseburger-with {
+    width: 120px;
+    position: relative;
+    border-radius: 18px;
+    height: 120px;
+    overflow: hidden;
+    flex-shrink: 0;
+    object-fit: cover;
+}
+.spaghetti-carbonara {
+    align-self: stretch;
+    position: relative;
+    letter-spacing: -0.02em;
+    display: -webkit-inline-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.b {
+    position: relative;
+    line-height: 135%;
+    text-align: right;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.frame1 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 8px;
+}
+.trash-icon {
+    width: 16px;
+    position: relative;
+    height: 16px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+.b1 {
+    position: relative;
+    line-height: 135%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.frame2 {
+    border-radius: 10px;
+    height: 32px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-content: center;
+    padding: 16px 10px;
+    box-sizing: border-box;
+    gap: 14px;
+}
+.table-cell-form {
+    border-radius: 10px;
+    background-color: #ffd700;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 15px;
+}
+.frame {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0px;
+}
+.container {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.shopping-checkout-item {
+    align-self: stretch;
+    background-color: #fff;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 10px 20px;
+}
+.frame5 {
+    height: 32px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-content: center;
+    padding: 16px 10px;
+    box-sizing: border-box;
+    gap: 14px;
+}
+.frame3 {
+    align-self: stretch;
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0px;
+}
+.container1 {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20px;
+}
+.shopping-checkout-item-list {
+    align-self: stretch;
+    background-color: #fffefa;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 10px 0px 32px;
+    gap: 14px;
+    z-index: 1;
+}
+.arrives-by-1230 {
+    align-self: stretch;
+    position: relative;
+    line-height: 135%;
+    display: -webkit-inline-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+.edit-location {
+    position: relative;
+    text-decoration: underline;
+    line-height: 135%;
+}
+.frame9 {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+.delivery {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 20px 0px;
+    gap: 6px;
+}
+.find-a-store {
+    flex: 1;
+    position: relative;
+    text-decoration: underline;
+    line-height: 135%;
+}
+.rectangle {
+    position: absolute;
+    width: 100%;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: rgba(110, 104, 73, 0.2);
+    height: 0.5px;
+}
+.divider {
+    align-self: stretch;
+    position: relative;
+    height: 1px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+.add-promo-code {
+    flex: 1;
+    position: relative;
+    letter-spacing: -0.02em;
+}
+.plus-small-icon3 {
+    width: 18px;
+    position: relative;
+    height: 18px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+.frame11 {
+    align-self: stretch;
+    height: 23px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+.labels {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 20px 0px;
+}
+.promo-code {
+    align-self: stretch;
+    background-color: #fffefa;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+.subtotal {
+    flex: 1;
+    position: relative;
+    line-height: 135%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.div {
+    flex: 1;
+    position: relative;
+    line-height: 135%;
+    text-align: right;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.estimated-total {
+    flex: 1;
+    position: relative;
+    letter-spacing: -0.02em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.frame14 {
+    align-self: stretch;
+    height: 23px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: #28261b;
+}
+.labels1 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 20px 0px;
+    gap: 6px;
+}
+.promo-code1 {
+    align-self: stretch;
+    background-color: #fffefa;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    color: rgba(46, 42, 20, 0.62);
+}
+.place-order {
+    flex: 1;
+    position: relative;
+    line-height: 135%;
+    font-weight: 500;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.button-large-primary {
+    align-self: stretch;
+    border-radius: 18px;
+    background-color: #ffd700;
+    height: 50px;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 14.5px 16px;
+    box-sizing: border-box;
+}
+.frame15 {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 20px 0px;
+    text-align: center;
+    color: #000;
+}
+.shopping-checkout-footer-with {
+    align-self: stretch;
+    background-color: #fffefa;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0px 20px;
+    z-index: 0;
+}
+.main-content {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    z-index: 1;
+}
+.icon {
+    position: absolute;
+    top: calc(50% - 20px);
+    left: calc(50% - 12px);
+    width: 24px;
+    height: 24px;
+    overflow: hidden;
+    object-fit: cover;
+}
+.home {
+    position: absolute;
+    top: calc(50% + 7px);
+    left: calc(50% - 15px);
+    line-height: 135%;
+    font-weight: 500;
+}
+.tab1 {
+    flex: 1;
+    position: relative;
+    height: 40px;
+    color: #8a7400;
+}
+.icon1 {
+    position: absolute;
+    top: calc(50% - 20px);
+    left: calc(50% - 12px);
+    width: 24px;
+    height: 24px;
+    overflow: hidden;
+}
+.search {
+    position: absolute;
+    top: calc(50% + 7px);
+    left: calc(50% - 17px);
+    line-height: 135%;
+    font-weight: 500;
+}
+.tab2 {
+    flex: 1;
+    position: relative;
+    height: 40px;
+}
+.cart {
+    position: absolute;
+    top: calc(50% + 7px);
+    left: calc(50% - 11px);
+    line-height: 135%;
+    font-weight: 500;
+}
+.profile {
+    position: absolute;
+    top: calc(50% + 7px);
+    left: calc(50% - 16px);
+    line-height: 135%;
+    font-weight: 500;
+}
+.tabs {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.rectangle3 {
+    position: absolute;
+    bottom: 8px;
+    left: calc(50% - 60px);
+    border-radius: 360px;
+    background-color: rgba(126, 112, 37, 0.09);
+    width: 120px;
+    height: 4px;
+}
+.gesture-indicator-bar {
+    align-self: stretch;
+    position: relative;
+    height: 32px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+.bottom-tab-bar-with-labels {
+    align-self: stretch;
+    background-color: #fffefa;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 4px 0px 0px;
+    gap: 4px;
+    z-index: 0;
+    text-align: center;
+    font-size: 11px;
+    color: rgba(46, 42, 20, 0.62);
+}
+.cart-screen {
+    width: 100%;
+    position: relative;
+    background-color: #fffefa;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    min-height: 852px;
+    text-align: left;
+    font-size: 17px;
+    color: #28261b;
+    font-family: Outfit;
+}
