@@ -2,6 +2,11 @@
 
 
 body {
-  	margin: 0;
+	background-color: black;
+	width: 100vw;
+	display: flex;
+	justify-content: center; /* Centers horizontally */
+	align-items: center; /* Centers vertically */
+	margin: 0;
   	line-height: normal;
 }

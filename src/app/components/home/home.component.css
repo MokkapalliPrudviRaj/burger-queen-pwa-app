@@ -484,6 +484,7 @@
 
 .home-screen {
     width: 100%;
+    min-width: 400px;
     position: relative;
     background-color: #fffefa;
     overflow: hidden;
@@ -491,7 +492,6 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    min-height: 852px;
     text-align: center;
     font-size: 17px;
     color: #28261b;

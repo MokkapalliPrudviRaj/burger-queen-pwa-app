@@ -28,11 +28,11 @@
       />
     </div>
   </div>
-  <div class="main-content">
+  <div class="main-content" *ngIf="BProduct">
     <div class="shopping-product-page-image-ca">
       <div class="a-gourmet-burger-with-a-toaste">
         <img
-          alt=""
+          [alt]="BProduct.name"
           src="../../../assets/images/A gourmet burger with a toasted sesame seed bun, fresh lettuce, ripe tomato, and melted cheese on a rustic wooden table..png"
         />
         <div class="content">
@@ -59,27 +59,29 @@
       <div class="carousel">
         <img
           class="a-juicy-cheeseburger-with-melt"
-          alt=""
-          src="../../../assets/images/A juicy cheeseburger with melted cheese, fresh lettuce, and ripe tomato on a toasted sesame seed bun..png"
+          [alt]="BProduct.name || 'Product Image'"
+          [src]="BProduct.mainImage"
         />
 
         <img
           class="a-juicy-cheeseburger-with-melt"
-          alt=""
-          src="../../../assets/images/A close-up view of a gourmet burger with a toasted sesame seed bun, juicy beef patty, fresh lettuce, ripe tomato slices, and melted cheese..png"
+          [alt]="BProduct.name || 'Product Image'"
+          [src]="BProduct.mainImage"
         />
 
         <img
           class="a-juicy-cheeseburger-with-melt"
-          alt=""
-          src="../../../assets/images/A close-up view of a gourmet burger with a toasted bun, fresh lettuce, tomato slices, and melted cheese..png"
+          [alt]="BProduct.name || 'Product Image'"
+          [src]="BProduct.mainImage"
         />
       </div>
     </div>
     <div class="shopping-product-page-product">
       <div class="fast-food">Fast Food</div>
-      <div class="classic-beef-burger">Classic Beef Burger</div>
-      <div class="div">$5.99</div>
+      <div class="classic-beef-burger">{{ BProduct.name }}</div>
+      <div class="div">
+        {{ BProduct.price | currency : "INR" : "symbol" : "1.2-2" }}
+      </div>
       <div class="chip-carousel-large">
         <div class="button-large-tertiary-with-ico">
           <div class="size">Size</div>
@@ -93,7 +95,7 @@
           </div>
         </div>
         <div class="chip-carousel-large1">
-          <div class="button-large-with-icon">
+          <div class="button-large-with-icon" routerLink="/cart" (click)="addToCart()">
             <div class="frame1">
               <img
                 class="bag-icon"
@@ -103,7 +105,6 @@
             </div>
             <div
               class="add-to-cart"
-              routerLink="/cart"
               routerLinkActive="active"
             >
               Add to Cart
@@ -121,7 +122,7 @@
         </div>
       </div>
       <div class="a-delicious-beef">
-        A delicious beef burger with fresh lettuce, tomato, and cheese.
+        {{ BProduct.description }}
       </div>
       <div class="view-more">View More</div>
     </div>
@@ -135,7 +136,9 @@
 
         <div class="labels">
           <div class="a-delicious-beef">Cheese Burger</div>
-          <div class="div1">$4.99</div>
+          <div class="div1">
+            {{ BProduct.price | currency : "INR" : "symbol" : "1.2-2" }}
+          </div>
         </div>
       </div>
       <div class="shopping-cell">
@@ -147,7 +150,9 @@
 
         <div class="labels">
           <div class="a-delicious-beef">Veggie Burger</div>
-          <div class="div1">$5.49</div>
+          <div class="div1">
+            {{ BProduct.price | currency : "INR" : "symbol" : "1.2-2" }}
+          </div>
         </div>
       </div>
       <div class="shopping-cell">
@@ -159,7 +164,9 @@
 
         <div class="labels">
           <div class="a-delicious-beef">Chicken Burger</div>
-          <div class="div1">$6.49</div>
+          <div class="div1">
+            {{ BProduct.price | currency : "INR" : "symbol" : "1.2-2" }}
+          </div>
         </div>
       </div>
     </div>

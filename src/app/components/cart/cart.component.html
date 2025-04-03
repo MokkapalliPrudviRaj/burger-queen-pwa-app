@@ -11,7 +11,7 @@
           class="forward-icon"
           alt=""
           src="../../../assets/images/Forward light left.svg"
-          routerLink="/productsDetails"
+          routerLink="/home"
           routerLinkActive="active"
         />
 
@@ -23,55 +23,21 @@
         />
       </div>
     </div>
-    <div class="shopping-checkout-item-list">
-      <div class="shopping-checkout-item">
-        <div class="container">
-          <img
-            class="a-delicious-cheeseburger-with"
-            alt=""
-            src="../../../assets/images/A delicious cheeseburger with melted cheese, lettuce, tomato, and pickles on a sesame seed bun, served on a wooden table..png"
-            routerLink="/productsDetails"
-            routerLinkActive="active"
-          />
-
-          <div class="frame">
-            <div class="frame1">
-              <b class="spaghetti-carbonara">Cheeseburger</b>
-              <b class="b">$8.99</b>
-            </div>
-            <div class="table-cell-form">
-              <div class="frame2">
-                <img
-                  class="trash-icon"
-                  alt=""
-                  src="../../../assets/images/Trash.svg"
-                />
-
-                <b class="b1">2</b>
-                <img
-                  class="trash-icon"
-                  alt=""
-                  src="../../../assets/images/Plus Small.svg"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div class="shopping-checkout-item-list" *ngFor="let item of cartItems">
       <div class="shopping-checkout-item">
         <div class="container1">
           <img
             class="a-delicious-cheeseburger-with"
-            alt=""
-            src="../../../assets/images/A colorful veggie burger made with a black bean patty, topped with avocado, lettuce, and tomato, served on a rustic wooden table..png"
-            routerLink="/productsDetails"
+            [alt]="item.name"
+            [src]="item.mainImage"
+            routerLink="/home"
             routerLinkActive="active"
           />
 
           <div class="frame3">
             <div class="frame1">
-              <b class="spaghetti-carbonara">Veggie Burger</b>
-              <b class="b">$7.49</b>
+              <b class="spaghetti-carbonara">{{ item.name }}</b>
+              <b class="b">{{ item.price.toFixed(2) | currency : "INR" : "symbol" : "1.2-2" }}</b>
             </div>
             <div class="table-cell-form">
               <div class="frame5">
@@ -79,47 +45,15 @@
                   class="trash-icon"
                   alt=""
                   src="../../../assets/images/Trash.svg"
+                  (click)="decreaseQuantity(item)"
                 />
 
-                <b class="b1">1</b>
+                <b class="b1">{{ item.stock }}</b>
                 <img
                   class="trash-icon"
                   alt=""
                   src="../../../assets/images/Plus Small.svg"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="shopping-checkout-item">
-        <div class="container1">
-          <img
-            class="a-delicious-cheeseburger-with"
-            alt=""
-            src="../../../assets/images/A mouth-watering bacon burger with crispy bacon, cheddar cheese, lettuce, and tomato on a toasted brioche bun, served on a white plate..png"
-            routerLink="/productsDetails"
-            routerLinkActive="active"
-          />
-
-          <div class="frame3">
-            <div class="frame1">
-              <b class="spaghetti-carbonara">Bacon Burger</b>
-              <b class="b">$9.99</b>
-            </div>
-            <div class="table-cell-form">
-              <div class="frame5">
-                <img
-                  class="trash-icon"
-                  alt=""
-                  src="../../../assets/images/Trash.svg"
-                />
-
-                <b class="b1">3</b>
-                <img
-                  class="trash-icon"
-                  alt=""
-                  src="../../../assets/images/Plus Small.svg"
+                  (click)="increaseQuantity(item)"
                 />
               </div>
             </div>
@@ -163,7 +97,7 @@
         <div class="labels1">
           <div class="frame11">
             <div class="subtotal">Subtotal</div>
-            <div class="div">$57.94</div>
+            <div class="div">{{ totalPrice.toFixed(2) | currency : "INR" : "symbol" : "1.2-2" }}</div>
           </div>
           <div class="frame11">
             <div class="subtotal">Delivery</div>
@@ -171,7 +105,7 @@
           </div>
           <div class="frame14">
             <b class="estimated-total">Estimated Total</b>
-            <b class="div">$57.94</b>
+            <b class="div">{{ totalPrice.toFixed(2) | currency : "INR" : "symbol" : "1.2-2"  }}</b>
           </div>
         </div>
       </div>
@@ -180,7 +114,7 @@
       </div>
       <div class="frame15">
         <div class="button-large-primary">
-          <div class="place-order">Place Order</div>
+          <div class="place-order" (click)="placeOrder()">Place Order</div>
         </div>
       </div>
     </div>

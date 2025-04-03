@@ -7,6 +7,7 @@ import { CartComponent } from './components/cart/cart.component';
 const routes: Routes = [
   { path: '', component: HomeComponent }, // Default route
   { path: 'productsDetails', component: ProductDetailsComponent },
+  { path: 'productsDetails/:id', component: ProductDetailsComponent }, // Route with ID parameter
   { path: 'cart', component: CartComponent },
   { path: '**', redirectTo: '' } // Redirect unknown routes to home
 ];

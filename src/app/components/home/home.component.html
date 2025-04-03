@@ -39,27 +39,30 @@
       </div>
     </div>
     <div class="food-delivery-checkout-items">
-      <div class="order-items">
+      <div class="order-items" *ngFor="let burger of BProducts">
         <div
           class="food-delivery-your-item-table"
+          (click)="goToProductDetails(burger.id)"
+          *ngIf="burger.type == 'Popular Items'"
           routerLink="/productsDetails"
           routerLinkActive="active"
         >
           <img
             class="a-spicy-black-bean-burger-topp"
-            alt=""
-            src="../../../assets/images/A spicy black bean burger topped with avocado, salsa, and fresh cilantro on a rustic wooden table..png"
+            [src]="burger.mainImage"
+            [alt]="burger.name"
           />
 
           <div class="labels">
             <div class="row-1">
-              <div class="classic-cheeseburger">Spicy Black Bean Burger</div>
-              <div class="div">$10.99</div>
+              <div class="classic-cheeseburger">{{ burger.name }}</div>
+              <div class="div">
+                {{ burger.price | currency : "INR" : "symbol" : "1.2-2" }}
+              </div>
             </div>
             <div class="row-3">
               <div class="juicy-beef-patty">
-                A spicy black bean patty topped with avocado, salsa, and fresh
-                cilantro
+                {{ burger.description }}
               </div>
             </div>
             <div class="row-2">
@@ -74,75 +77,6 @@
             </div>
           </div>
           <div class="divider"></div>
-        </div>
-        <div
-          class="food-delivery-your-item-table"
-          routerLink="/productsDetails"
-          routerLinkActive="active"
-        >
-          <img
-            class="a-spicy-black-bean-burger-topp"
-            alt=""
-            src="../../../assets/images/A Mushroom Swiss Burger with sautéed mushrooms and Swiss cheese on a toasted bun placed on a rustic wooden table..png"
-          />
-
-          <div class="labels">
-            <div class="row-1">
-              <div class="classic-cheeseburger">Mushroom Swiss Burger</div>
-              <div class="div">$12.99</div>
-            </div>
-            <div class="row-3">
-              <div class="juicy-beef-patty">
-                Grilled beef patty topped with sautéed mushrooms and Swiss
-                cheese
-              </div>
-            </div>
-            <div class="row-2">
-              <div class="chip-small-button-shape-icon-r">
-                <div class="qty-1">Qty 1</div>
-                <img
-                  class="chip-icon"
-                  alt=""
-                  src="../../../assets/images/Chip.svg"
-                />
-              </div>
-            </div>
-          </div>
-          <div class="divider"></div>
-        </div>
-        <div
-          class="food-delivery-your-item-table"
-          routerLink="/productsDetails"
-          routerLinkActive="active"
-        >
-          <img
-            class="a-spicy-black-bean-burger-topp"
-            alt=""
-            src="../../../assets/images/A Mediterranean Lamb Burger with tzatziki sauce, lettuce, and tomato on a rustic wooden table..png"
-          />
-
-          <div class="labels">
-            <div class="row-1">
-              <div class="classic-cheeseburger">Mediterranean Lamb Burger</div>
-              <div class="div">$9.99</div>
-            </div>
-            <div class="row-3">
-              <div class="juicy-beef-patty">
-                Juicy lamb patty with tzatziki sauce, lettuce, and tomato
-              </div>
-            </div>
-            <div class="row-2">
-              <div class="chip-small-button-shape-icon-r">
-                <div class="qty-1">Qty 1</div>
-                <img
-                  class="chip-icon"
-                  alt=""
-                  src="../../../assets/images/Chip.svg"
-                />
-              </div>
-            </div>
-          </div>
-          <div class="divider2"></div>
         </div>
       </div>
     </div>
@@ -162,26 +96,30 @@
       </div>
     </div>
     <div class="food-delivery-checkout-items1">
-      <div class="order-items">
+      <div class="order-items" *ngFor="let burger of BProducts">
         <div
           class="food-delivery-your-item-table"
           routerLink="/productsDetails"
           routerLinkActive="active"
+          *ngIf="burger.type == 'Special Offers'"
+          (click)="goToProductDetails(burger.id)"
         >
           <img
             class="a-spicy-black-bean-burger-topp"
-            alt=""
-            src="../../../assets/images/A crispy buffalo cauliflower burger with ranch dressing and lettuce on a rustic wooden table..png"
+            [alt]="burger.name"
+            [src]="burger.mainImage"
           />
 
           <div class="labels">
             <div class="row-1">
-              <div class="classic-cheeseburger">Buffalo Cauliflower Burger</div>
-              <div class="div">$10.99</div>
+              <div class="classic-cheeseburger">{{ burger.name }}</div>
+              <div class="div">
+                {{ burger.price | currency : "INR" : "symbol" : "1.2-2" }}
+              </div>
             </div>
             <div class="row-3">
               <div class="juicy-beef-patty">
-                Crispy buffalo cauliflower with ranch dressing and lettuce
+                {{ burger.description }}
               </div>
             </div>
             <div class="row-2">
@@ -196,75 +134,6 @@
             </div>
           </div>
           <div class="divider"></div>
-        </div>
-        <div
-          class="food-delivery-your-item-table"
-          routerLink="/productsDetails"
-          routerLinkActive="active"
-        >
-          <img
-            class="a-spicy-black-bean-burger-topp"
-            alt=""
-            src="../../../assets/images/A Teriyaki Chicken Burger with grilled chicken patty, teriyaki sauce, pineapple, and lettuce on a toasted bun..png"
-          />
-
-          <div class="labels">
-            <div class="row-1">
-              <div class="classic-cheeseburger">Teriyaki Chicken Burger</div>
-              <div class="div">$12.99</div>
-            </div>
-            <div class="row-3">
-              <div class="juicy-beef-patty">
-                Grilled chicken patty with teriyaki sauce, pineapple, and
-                lettuce
-              </div>
-            </div>
-            <div class="row-2">
-              <div class="chip-small-button-shape-icon-r">
-                <div class="qty-1">Qty 1</div>
-                <img
-                  class="chip-icon"
-                  alt=""
-                  src="../../../assets/images/Chip.svg"
-                />
-              </div>
-            </div>
-          </div>
-          <div class="divider"></div>
-        </div>
-        <div
-          class="food-delivery-your-item-table"
-          routerLink="/productsDetails"
-          routerLinkActive="active"
-        >
-          <img
-            class="a-spicy-black-bean-burger-topp"
-            alt=""
-            src="../../../assets/images/A Mushroom Swiss Burger with sautéed mushrooms and Swiss cheese on a toasted bun placed on a rustic wooden table..png"
-          />
-
-          <div class="labels">
-            <div class="row-1">
-              <div class="classic-cheeseburger">Veggie Burger</div>
-              <div class="div">$9.99</div>
-            </div>
-            <div class="row-3">
-              <div class="juicy-beef-patty">
-                A delicious plant-based burger with fresh veggies
-              </div>
-            </div>
-            <div class="row-2">
-              <div class="chip-small-button-shape-icon-r">
-                <div class="qty-1">Qty 1</div>
-                <img
-                  class="chip-icon"
-                  alt=""
-                  src="../../../assets/images/Chip.svg"
-                />
-              </div>
-            </div>
-          </div>
-          <div class="divider2"></div>
         </div>
       </div>
     </div>
@@ -282,111 +151,46 @@
           />
         </div>
       </div>
-      <div class="food-delivery-checkout-items2">
-        <div class="order-items">
-          <div
-            class="food-delivery-your-item-table"
-            routerLink="/productsDetails"
-            routerLinkActive="active"
-          >
-            <img
-              class="a-spicy-black-bean-burger-topp"
-              alt=""
-              src="../../../assets/images/A BBQ Pulled Pork Burger with slow-cooked pulled pork, BBQ sauce, and coleslaw on a toasted bun..png"
-            />
+    </div>
+    <div class="food-delivery-checkout-items2">
+      <div class="order-items" *ngFor="let burger of BProducts">
+        <div
+          class="food-delivery-your-item-table"
+          routerLink="/productsDetails"
+          routerLinkActive="active"
+          *ngIf="burger.type == 'New Arrivals'"
+          (click)="goToProductDetails(burger.id)"
+        >
+          <img
+            class="a-spicy-black-bean-burger-topp"
+            [alt]="burger.name"
+            [src]="burger.mainImage"
+          />
 
-            <div class="labels">
-              <div class="row-1">
-                <div class="classic-cheeseburger">BBQ Pulled Pork Burger</div>
-                <div class="div">$10.99</div>
-              </div>
-              <div class="row-3">
-                <div class="juicy-beef-patty">
-                  Slow-cooked pulled pork with BBQ sauce and coleslaw
-                </div>
-              </div>
-              <div class="row-2">
-                <div class="chip-small-button-shape-icon-r">
-                  <div class="qty-1">Qty 1</div>
-                  <img
-                    class="chip-icon"
-                    alt=""
-                    src="../../../assets/images/Chip.svg"
-                  />
-                </div>
+          <div class="labels">
+            <div class="row-1">
+              <div class="classic-cheeseburger">{{ burger.name }}</div>
+              <div class="div">
+                {{ burger.price | currency : "INR" : "symbol" : "1.2-2" }}
               </div>
             </div>
-            <div class="divider"></div>
-          </div>
-          <div
-            class="food-delivery-your-item-table"
-            routerLink="/productsDetails"
-            routerLinkActive="active"
-          >
-            <img
-              class="a-spicy-black-bean-burger-topp"
-              alt=""
-              src="../../../assets/images/A Hawaiian Burger with juicy beef patty topped with grilled pineapple and teriyaki sauce on a rustic wooden table..png"
-            />
-
-            <div class="labels">
-              <div class="row-1">
-                <div class="classic-cheeseburger">Hawaiian Burger</div>
-                <div class="div">$12.99</div>
-              </div>
-              <div class="row-3">
-                <div class="juicy-beef-patty">
-                  Juicy beef patty topped with grilled pineapple and teriyaki
-                  sauce
-                </div>
-              </div>
-              <div class="row-2">
-                <div class="chip-small-button-shape-icon-r">
-                  <div class="qty-1">Qty 1</div>
-                  <img
-                    class="chip-icon"
-                    alt=""
-                    src="../../../assets/images/Chip.svg"
-                  />
-                </div>
+            <div class="row-3">
+              <div class="juicy-beef-patty">
+                {{ burger.description }}
               </div>
             </div>
-            <div class="divider"></div>
-          </div>
-          <div
-            class="food-delivery-your-item-table"
-            routerLink="/productsDetails"
-            routerLinkActive="active"
-          >
-            <img
-              class="a-spicy-black-bean-burger-topp"
-              alt=""
-              src="../../../assets/images/A Cheeseburger Deluxe with a juicy beef patty, melted cheese, lettuce, tomato, and pickles on a toasted bun..png"
-            />
-
-            <div class="labels">
-              <div class="row-1">
-                <div class="classic-cheeseburger">Cheeseburger Deluxe</div>
-                <div class="div">$9.99</div>
-              </div>
-              <div class="row-3">
-                <div class="juicy-beef-patty">
-                  Classic cheeseburger with all the fixings
-                </div>
-              </div>
-              <div class="row-2">
-                <div class="chip-small-button-shape-icon-r">
-                  <div class="qty-1">Qty 1</div>
-                  <img
-                    class="chip-icon"
-                    alt=""
-                    src="../../../assets/images/Chip.svg"
-                  />
-                </div>
+            <div class="row-2">
+              <div class="chip-small-button-shape-icon-r">
+                <div class="qty-1">Qty 1</div>
+                <img
+                  class="chip-icon"
+                  alt=""
+                  src="../../../assets/images/Chip.svg"
+                />
               </div>
             </div>
-            <div class="divider2"></div>
           </div>
+          <div class="divider"></div>
         </div>
       </div>
     </div>
